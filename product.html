@@ -488,6 +488,10 @@
             const productId = params.get('id');
             console.log(productId);
 
+            const currentURL = window.location.href;
+
+            const urlObj = new URL(currentURL);
+
             const response = await fetch('inventory.json');
             const responseJson = await response.json();
             const category_collections = responseJson.pages[1].collections;
