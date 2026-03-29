@@ -486,6 +486,7 @@
         async function generate_product_page(){
             const params = new URLSearchParams(window.location.search);
             const productId = params.get('id');
+            console.log(productId);
 
             const response = await fetch('inventory.json');
             const responseJson = await response.json();
