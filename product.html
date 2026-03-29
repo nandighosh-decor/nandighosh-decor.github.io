@@ -507,7 +507,7 @@
 
             document.getElementById("collection").innerHTML = "Part of the " + collection;
             document.getElementById("title").innerHTML = prod_name;
-            let baseFilePath = `/images/products/prod_${productId}/`;
+            let baseFilePath = `/images/products/prod_${productId + 1}/`;
             let innerHTMLString = "";
             for(let i = 0; i < num_imgs; i++){
                 let currString = baseFilePath + `img_${i}.jpg`;
