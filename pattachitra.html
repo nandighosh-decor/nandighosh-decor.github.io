@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattachitra - Nandighosh eCommerce</title>
+    
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lora&family=Gentium+Basic&family=Playfair+Display&family=Montserrat:wght@400;700&display=swap' rel='stylesheet'>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Basic', serif;
+            color: #7b8c89;
+            font-size: 18px;
+            line-height: 34px;
+            background-size: cover;
+        }
+
+        .body-wrap {
+            max-width: 100%;
+        }
+
+        /* Header */
+        #header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 40px 30px 40px;
+            background: transparent;
+        }
+
+        #sitename {
+            font-family: 'Brush Script MT', cursive;
+            font-weight: 400;
+            color: #76b3b8;
+            font-size: 48px;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation */
+        #navigation {
+            background: transparent;
+            padding: 0;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .wsite-menu-default {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            gap: 0;
+        }
+
+        .wsite-menu-item-wrap {
+            display: inline-block;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wsite-menu-item {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+            font-size: 11px;
+            color: #999;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: block;
+            padding: 15px 25px;
+        }
+
+        .wsite-menu-item:hover {
+            color: #76b3b8;
+        }
+
+        /* Dropdown */
+        .wsite-menu-wrap {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            min-width: 150px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+            border: 1px solid #e0e0e0;
+        }
+
+        .wsite-menu-item-wrap:hover .wsite-menu-wrap {
+            display: block;
+        }
+
+        .wsite-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .wsite-menu-subitem-wrap {
+            padding: 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .wsite-menu-subitem-wrap:last-child {
+            border-bottom: none;
+        }
+
+        .wsite-menu-subitem {
+            display: block;
+            padding: 12px 20px;
+            color: #999;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .wsite-menu-subitem:hover {
+            background: #f8f8f8;
+            color: #76b3b8;
+        }
+
+        .wsite-nav-current .wsite-menu-subitem {
+            color: #76b3b8;
+        }
+
+        .wsite-menu-title {
+            display: inline;
+        }
+
+        /* Content */
+        #content-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .wsite-section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 60px 40px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        h2.wsite-content-title {
+            font-family: 'Playfair Display', serif;
+            color: #42514c;
+            font-size: 34px;
+            margin-bottom: 30px;
+        }
+
+        .paragraph {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .styled-hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 20px 0;
+        }
+
+        /* Multi-column layout */
+        .wsite-multicol-table-wrap {
+            margin: 0 -15px;
+        }
+
+        .wsite-multicol-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .wsite-multicol-col {
+            padding: 15px 15px;
+            vertical-align: top;
+        }
+
+        /* Callout boxes */
+        .callout-box-wrapper {
+            padding: 20px 0;
+        }
+
+        .callout-box--material,
+        .callout-box--standard {
+            padding: 20px;
+        }
+
+        /* Images */
+        .wsite-image {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .wsite-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        /* Buttons */
+        .wsite-button {
+            display: inline-block;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 2px;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 11px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .wsite-button-highlight {
+            background: #76b3b8;
+            color: white;
+        }
+
+        .wsite-button-normal {
+            background: #42514c;
+            color: white;
+        }
+
+        .wsite-button:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
+
+        /* Spacer */
+        .wsite-spacer {
+            clear: both;
+        }
+
+        /* Footer */
+        #footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            margin-top: 40px;
+        }
+
+        #footer a {
+            color: #76b3b8;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+                line-height: 28px;
+            }
+
+            #header {
+                padding: 15px 20px;
+            }
+
+            #navigation {
+                padding: 10px 20px;
+            }
+
+            .wsite-menu-default {
+                display: block;
+            }
+
+            .wsite-menu-item-wrap {
+                display: block;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            .wsite-menu-item {
+                padding: 15px 10px;
+            }
+
+            .wsite-section {
+                padding: 30px 20px;
+            }
+
+            h2.wsite-content-title {
+                font-size: 28px;
+            }
+
+            .wsite-multicol-table,
+            .wsite-multicol-tbody,
+            .wsite-multicol-tr,
+            .wsite-multicol-col {
+                display: block;
+                width: 100% !important;
+            }
+
+            .wsite-multicol-col {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<script src="/template.js"></script>
+<body onload="generate_catalog_page_pattachitra()">
+    <div class="body-wrap">
+        <!-- Header -->
+        <div id="header">
+            <div id="sitename">Nandighosh eCommerce</div>
+        </div>
+
+        <!-- Navigation -->
+        <div id="navigation">
+            <ul class="wsite-menu-default">
+                <li class="wsite-menu-item-wrap">
+                    <a href="index.html" class="wsite-menu-item">Home</a>
+                </li>
+                <li class="wsite-menu-item-wrap">
+                    <a class="wsite-menu-item">All Products</a>
+                    <div class="wsite-menu-wrap">
+                        <ul class="wsite-menu">
+                            <li class="wsite-menu-subitem-wrap">
+                                <a href="chandua.html" class="wsite-menu-subitem">
+                                    <span class="wsite-menu-title">Chandua</span>
+                                </a>
+                            </li>
+                            <li class="wsite-menu-subitem-wrap wsite-nav-current">
+                                <a href="pattachitra.html" class="wsite-menu-subitem">
+                                    <span class="wsite-menu-title">Pattachitra</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="wsite-menu-item-wrap">
+                    <a href="contact.html" class="wsite-menu-item">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div id="content-wrapper">
+            <!-- Introduction Section -->
+            <div class="wsite-section">
+                <h2 class="wsite-content-title" style="text-align:center;">Pattachitra Selections</h2>
+                
+                <div class="catalog-category-description">
+                    In Odia, <em>Patta</em> means cloth or palm leaves and <em>chitra</em> means painting. With a legacy spanning over a millennium, <em>pattachitra</em> are paintings on cloth depicting symbolic representations of Hindu deities and allegories designed to raise social awareness. Each canvas is delicately coated with tamarind seed glue and chalk powder, before being sun-dried and burnished with stones for smoothness. Natural pigments--spanning across white from powdered conch shells, red from hingula stones, black from lamp soot, blue from indigo leaves, yellow from haritala stones, green from neem and parijata plant extract, and brown from burnt ochre--populate the canvas, bringing together timeless worlds.
+                </div>
+
+				<div id="categories-parent">
+				<div class="category" id="cat-1">
+                <hr class="styled-hr">
+
+                <!-- Fauna Collection -->
+				
+                <table class="wsite-multicol-table">
+                    <tr class="wsite-multicol-tr">
+                        <td class="wsite-multicol-col" style="width:44.58%;">
+                            <h2 class="wsite-content-title category-title" style="font-size:42px;" id="cat-1-title">Fauna Collection</h2>
+                        </td>
+                        <td class="wsite-multicol-col" style="width:55.42%;">
+                            <p style="text-align:right; font-size:32px; margin-top:10px;">Majestic elephants (<em>hathi</em>) and peacocks (<em>mayura</em>) in their glory</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="callout-box-wrapper">
+                    <div class="callout-box--material">
+                        <table class="wsite-multicol-table">
+                            <tr>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5940_6.jpg" alt="Procession of Hathi">
+                                    </div>
+                                    <p style="text-align:center;">Procession of <em>Hathi</em> amongst flowers (35 inch)</p>
+                                    <div style="text-align:center; margin-top:15px;">
+                                        <a class="wsite-button wsite-button-highlight" href="#">Learn More</a>
+                                    </div>
+                                </td>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5953_12.jpg" alt="Midnight dance of mayura pair">
+                                    </div>
+                                    <p style="text-align:center;">Midnight dance of <em>mayura</em> pair (black and green)</p>
+                                    <div style="text-align:center; margin-top:15px;">
+                                        <a class="wsite-button wsite-button-highlight" href="#">Learn More</a>
+                                    </div>
+                                </td>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5951_10.jpg" alt="Majestic solo dance of mayura">
+                                    </div>
+                                    <p style="text-align:center;">Majestic solo dance of <em>mayura</em> (red and blue)</p>
+                                    <div style="text-align:center; margin-top:15px;">
+                                        <a class="wsite-button wsite-button-highlight" href="#">Buy Now</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5968_11.jpg" alt="Midnight dance of mayura pair">
+                                    </div>
+                                    <p style="text-align:center;">Midnight dance of <em>mayura</em> pair (black and pink)</p>
+                                    <div style="text-align:center; margin-top:15px;">
+                                        <a class="wsite-button wsite-button-normal" href="#">Learn More</a>
+                                    </div>
+                                </td>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5983_10.jpg" alt="Procession of Hathi">
+                                    </div>
+                                    <p style="text-align:center;">Procession of <em>Hathi</em> amongst flowers (34.75 inch)</p>
+                                    <div style="text-align:center; margin-top:15px;">
+                                        <a class="wsite-button wsite-button-normal" href="#">Learn More</a>
+                                    </div>
+                                </td>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5985_10.jpg" alt="Daylight dance of mayura pair">
+                                    </div>
+                                    <p style="text-align:center;">Daylight dance of <em>mayura</em> pair (red and blue)</p>
+                                    <div style="text-align:center; margin-top:15px;">
+                                        <a class="wsite-button wsite-button-normal" href="#">Buy Now</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div></div>
+
+				<div class="category" id="cat-2">
+                <hr class="styled-hr">
+
+                <!-- Flora Collection -->
+                <table class="wsite-multicol-table">
+                    <tr>
+                        <td class="wsite-multicol-col" style="width:52%;">
+                            <h2 class="wsite-content-title category-title" style="font-size:42px;" id="cat-2-title">Flora Collection</h2>
+                        </td>
+                        <td class="wsite-multicol-col" style="width:48%;">
+                            <p style="text-align:right; font-size:32px; margin-top:10px;">Lotus, jasmine, and other vibrant flowers brought to life</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="callout-box-wrapper">
+                    <div class="callout-box--material">
+                        <table class="wsite-multicol-table">
+                            <tr>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5990_12.jpg" alt="Mystic blooms">
+                                    </div>
+                                    <p style="text-align:center;">Mystic blooms</p>
+                                </td>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5996_12.jpg" alt="Flowers at dawn">
+                                    </div>
+                                    <p style="text-align:center;">Flowers at dawn</p>
+                                </td>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-6003_12.jpg" alt="Flowers in spring">
+                                    </div>
+                                    <p style="text-align:center;">Flowers in spring</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+			</div>
+
+				<div class="category" id="cat-3">
+                <hr class="styled-hr">
+
+                <!-- Divinity Collection -->
+                <table class="wsite-multicol-table">
+                    <tr>
+                        <td class="wsite-multicol-col" style="width:50%;">
+                            <h2 class="wsite-content-title category-title" style="font-size:42px;" id="cat-3-title">Divinity Collection</h2>
+                        </td>
+                        <td class="wsite-multicol-col" style="width:50%;">
+                            <p style="text-align:right; font-size:32px; margin-top:10px;">Vivid depictions of deities</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="callout-box-wrapper">
+                    <div class="callout-box--material">
+                        <table class="wsite-multicol-table">
+                            <tr>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5930_8.jpg" alt="Lord Jagannath with shankha">
+                                    </div>
+                                    <p style="text-align:center;">Lord Jagannath with <em>shankha</em> (sacred conch)</p>
+                                </td>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5944_7.jpg" alt="Lord Jagannath in sunlight">
+                                    </div>
+                                    <p style="text-align:center;">Lord Jagannath in sunlight with <em>mogra</em> (jasmine)</p>
+                                </td>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5955_7.jpg" alt="Krishna and Radha">
+                                    </div>
+                                    <p style="text-align:center;">Lord Krishna and Goddess Radha's midnight dance</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5961_9.jpg" alt="Lord Jagannath amidst padma">
+                                    </div>
+                                    <p style="text-align:center;">Lord Jagannath amidst <em>padma</em> (lotus)</p>
+                                </td>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5965_6.jpg" alt="Lord Jagannath amidst suryamukhi">
+                                    </div>
+                                    <p style="text-align:center;">Lord Jagannath amidst <em>suryamukhi</em> (sunflower) and <em>mogra</em> (jasmine)</p>
+                                </td>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5973_7.jpg" alt="Lord Jagannath celebrating spring">
+                                    </div>
+                                    <p style="text-align:center;">Lord Jagannath celebrating the advent of spring</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5975_8.jpg" alt="Intense Lord Jagannath">
+                                    </div>
+                                    <p style="text-align:center;">Intense Lord Jagannath in full power</p>
+                                </td>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5992_8.jpg" alt="Lord Ganesha">
+                                    </div>
+                                    <p style="text-align:center;">Midnight stroll of Lord Ganesha</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+			</div>
+
+			<div class="category" id="cat-4">
+                <hr class="styled-hr">
+
+                <!-- Festive Collection -->
+                <table class="wsite-multicol-table">
+                    <tr>
+                        <td class="wsite-multicol-col" style="width:50%;">
+                            <h2 class="wsite-content-title category-title" style="font-size:42px;" id="cat-4-title">Festive Collection</h2>
+                        </td>
+                        <td class="wsite-multicol-col" style="width:50%;">
+                            <p style="text-align:right; font-size:32px; margin-top:10px;">Festive tapestries with symmetric filigrees</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="callout-box-wrapper">
+                    <div class="callout-box--material">
+                        <table class="wsite-multicol-table">
+                            <tr>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5922_13.jpg" alt="Large autumn canopy">
+                                    </div>
+                                    <p style="text-align:center;">Large autumn canopy (Dark pink and yellow)</p>
+                                </td>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5979_8.jpg" alt="Summertime canopy">
+                                    </div>
+                                    <p style="text-align:center;">Summertime canopy (Dark green and yellow)</p>
+                                </td>
+                                <td class="wsite-multicol-col" style="width:33%;">
+                                    <div class="wsite-image">
+                                        <img src="images/img-5924_8.jpg" alt="Large summertime canopy">
+                                    </div>
+                                    <p style="text-align:center;">Large summertime canopy (Dark green and yellow)</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+		</div>
+        </div>
+
+    </div>
+
+    <script>
+        async function generate_catalog_page_pattachitra(){
+            const response = await fetch('inventory.json');
+            const responseJson = await response.json();
+            const category_collections = responseJson.pages[1].collections;
+            const products = responseJson.products;
+            
+            let parentElement = document.getElementById('categories-parent');
+            parentElement.innerHTML = "";
+
+            let htmlToAdd = "";
+
+            // now we iterate through every category Inventory and generate the page description HTML, and then the page view.
+            for(const c of category_collections){
+                let category_name = c.name;
+                let category_desc = c['category-description'];
+                let listItemsInCategory = c['product-ids'];
+
+
+                htmlToAdd += `<div class="category">
+                                <hr class="styled-hr">
+                                <table class="wsite-multicol-table">
+                                    <tr class="wsite-multicol-tr">
+                                        <td class="wsite-multicol-col" style="width:44.58%;">
+                                            <h2 class="wsite-content-title category-title" style="font-size:42px;">${category_name}</h2>
+                                        </td>
+                                        <td class="wsite-multicol-col" style="width:55.42%;">
+                                            <p style="text-align:right; font-size:32px; margin-top:10px;">${category_desc}</p>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <div class="callout-box-wrapper">
+                                    <div class="callout-box--material">
+                                        <table class="wsite-multicol-table">`;
+                                        
+                let i = 0;
+
+                while(i < listItemsInCategory.length){
+                    let currentProdId = listItemsInCategory[i];
+
+                    if (i % 3 == 0){
+                        // start of a new row.
+                        htmlToAdd += `<tr>`;
+                    }
+
+                    htmlToAdd += `<td class="wsite-multicol-col" style="width:33%;">
+                                                    <div class="wsite-image">
+                                                        <img src="/images/products/prod_${currentProdId}/img_0.jpg">
+                                                    </div>
+                                                    <p style="text-align:center;">${products[currentProdId].name}</p>
+                                                    <div style="text-align:center; margin-top:15px;">
+                                                        <a class="wsite-button wsite-button-highlight" href="product.html?id=product-${currentProdId}">Learn More</a>
+                                                    </div>
+                                                </td>`;
+                    
+                    if((i + 1) % 3 == 0 ){ //example: 2, 5, 8 (last elements of columns); then add new row
+                        htmlToAdd += `</tr>`;
+                    } 
+                    i += 1;
+                }
+                
+                htmlToAdd += `</table></div></div></div>`;
+
+            }
+            parentElement.innerHTML = htmlToAdd;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Nandighosh eCommerce</title>
+    
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lora&family=Gentium+Basic&family=Playfair+Display&family=Montserrat:wght@400;700&display=swap' rel='stylesheet'>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Basic', serif;
+            color: #7b8c89;
+            font-size: 18px;
+            line-height: 34px;
+            background-size: cover;
+        }
+
+        .body-wrap {
+            max-width: 100%;
+        }
+
+        /* Header */
+        #header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 40px 30px 40px;
+            background: transparent;
+        }
+
+        #sitename {
+            font-family: 'Brush Script MT', cursive;
+            font-weight: 400;
+            color: #76b3b8;
+            font-size: 48px;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation */
+        #navigation {
+            background: transparent;
+            padding: 0;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .wsite-menu-default {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            gap: 0;
+        }
+
+        .wsite-menu-item-wrap {
+            display: inline-block;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wsite-menu-item {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+            font-size: 11px;
+            color: #999;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: block;
+            padding: 15px 25px;
+        }
+
+        .wsite-menu-item:hover {
+            color: #76b3b8;
+        }
+
+        /* Dropdown */
+        .wsite-menu-wrap {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            min-width: 150px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+            border: 1px solid #e0e0e0;
+        }
+
+        .wsite-menu-item-wrap:hover .wsite-menu-wrap {
+            display: block;
+        }
+
+        .wsite-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .wsite-menu-subitem-wrap {
+            padding: 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .wsite-menu-subitem-wrap:last-child {
+            border-bottom: none;
+        }
+
+        .wsite-menu-subitem {
+            display: block;
+            padding: 12px 20px;
+            color: #999;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .wsite-menu-subitem:hover {
+            background: #f8f8f8;
+            color: #76b3b8;
+        }
+
+        .wsite-menu-title {
+            display: inline;
+        }
+
+        /* Content */
+        #content-wrapper {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .wsite-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px 40px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2.wsite-content-title {
+            font-family: 'Playfair Display', serif;
+            color: #42514c;
+            font-size: 34px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .paragraph {
+            margin-bottom: 30px;
+            text-align: center;
+            color: #2a2a2a;
+        }
+
+        /* Form Styles */
+        .wsite-multicol-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .wsite-multicol-col {
+            padding: 0 10px;
+            vertical-align: top;
+        }
+
+        .wsite-form-field {
+            margin-bottom: 25px;
+        }
+
+        .wsite-form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #42514c;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-required {
+            color: #c41e3a;
+        }
+
+        .wsite-form-input {
+            width: 100%;
+            padding: 14px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: all 0.3s;
+            background: #fafafa;
+            font-family: 'Gentium Basic', serif;
+        }
+
+        .wsite-form-input:focus {
+            outline: none;
+            border-color: #76b3b8;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(118, 179, 184, 0.1);
+        }
+
+        .wsite-form-radio-container {
+            margin: 20px 0;
+        }
+
+        .form-radio-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-radio-container input {
+            cursor: pointer;
+        }
+
+        .form-radio-container label {
+            cursor: pointer;
+            color: #7b8c89;
+            font-family: 'Gentium Basic', serif;
+            font-size: 14px;
+        }
+
+        .wsite-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #76b3b8;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .wsite-button:hover {
+            background: #42514c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(118, 179, 184, 0.3);
+        }
+
+        .wsite-spacer {
+            clear: both;
+        }
+
+        /* Footer */
+        #footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            margin-top: 40px;
+        }
+
+        #footer a {
+            color: #76b3b8;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+                line-height: 28px;
+            }
+
+            #header {
+                padding: 15px 20px;
+            }
+
+            #navigation {
+                padding: 10px 20px;
+            }
+
+            .wsite-menu-default {
+                display: block;
+            }
+
+            .wsite-menu-item-wrap {
+                display: block;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            .wsite-menu-item {
+                padding: 15px 10px;
+            }
+
+            .wsite-section {
+                padding: 30px 20px;
+            }
+
+            h2.wsite-content-title {
+                font-size: 28px;
+            }
+
+            .wsite-multicol-table,
+            .wsite-multicol-tbody,
+            .wsite-multicol-tr,
+            .wsite-multicol-col {
+                display: block;
+                width: 100% !important;
+            }
+
+            .wsite-multicol-col {
+                padding: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="body-wrap">
+        <!-- Header -->
+        <div id="header">
+            <div id="sitename">Nandighosh eCommerce (copy)</div>
+        </div>
+
+        <!-- Navigation -->
+        <div id="navigation">
+            <ul class="wsite-menu-default">
+                <li class="wsite-menu-item-wrap">
+                    <a href="index.html" class="wsite-menu-item">Home</a>
+                </li>
+                <li class="wsite-menu-item-wrap">
+                    <a class="wsite-menu-item">All Products</a>
+                    <div class="wsite-menu-wrap">
+                        <ul class="wsite-menu">
+                            <li class="wsite-menu-subitem-wrap">
+                                <a href="chandua.html" class="wsite-menu-subitem">
+                                    <span class="wsite-menu-title">Chandua</span>
+                                </a>
+                            </li>
+                            <li class="wsite-menu-subitem-wrap">
+                                <a href="pattachitra.html" class="wsite-menu-subitem">
+                                    <span class="wsite-menu-title">Pattachitra</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="wsite-menu-item-wrap">
+                    <a href="about.html" class="wsite-menu-item">About</a>
+                </li>
+                <li class="wsite-menu-item-wrap">
+                    <a href="contact.html" class="wsite-menu-item">Contact</a>
+                </li>
+                <li class="wsite-menu-item-wrap">
+                    <a href="my-cart.html" class="wsite-menu-item">My Cart</a>
+                </li>
+                <li class="wsite-menu-item-wrap">
+                    <a href="account.html" class="wsite-menu-item">Account</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div id="content-wrapper">
+            <div class="wsite-section">
+                <div style="height:20px;"></div>
+                
+                <h2 class="wsite-content-title">Contact Us</h2>
+                
+                <div class="paragraph">
+                    <span style="font-size: 20px; color: #2a2a2a;">Have questions as a customer?</span>
+                    <br>
+                    <span style="color: #2a2a2a;">Interested in partnering with us for business? Plan to discuss community collaborations?<br>Contact us below!</span>
+                </div>
+
+                <div style="height:30px;"></div>
+
+                <form action="#" method="POST">
+                    <p class="wsite-form-label"><span class="form-required">*</span> Indicates required field</p>
+                    
+                    <table class="wsite-multicol-table">
+                        <tr>
+                            <td class="wsite-multicol-col" style="width:50%;">
+                                <div class="wsite-form-field">
+                                    <label class="wsite-form-label" for="first-name">
+                                        First Name <span class="form-required">*</span>
+                                    </label>
+                                    <input type="text" id="first-name" class="wsite-form-input" required>
+                                </div>
+                            </td>
+                            <td class="wsite-multicol-col" style="width:50%;">
+                                <div class="wsite-form-field">
+                                    <label class="wsite-form-label" for="last-name">
+                                        Last Name <span class="form-required">*</span>
+                                    </label>
+                                    <input type="text" id="last-name" class="wsite-form-input" required>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="wsite-form-field">
+                        <label class="wsite-form-label" for="email">
+                            Email <span class="form-required">*</span>
+                        </label>
+                        <input type="email" id="email" class="wsite-form-input" required>
+                    </div>
+
+                    <div style="height:10px;"></div>
+
+                    <div class="wsite-form-field">
+                        <div class="wsite-form-radio-container">
+                            <span class="form-radio-container">
+                                <input type="checkbox" id="opt-in">
+                                <label for="opt-in">
+                                    I agree to receiving marketing and promotional materials
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button type="submit" class="wsite-button">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+
+                <div style="height:24px;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

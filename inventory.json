@@ -1,0 +1,361 @@
+{
+    "pages":[
+        {
+            "parent-category": "chandua",
+            "parent-category-description": "Chandua description placeholder",
+            "collections":[
+                {
+                    "name":"Fauna Collection", 
+                    "category-description": "Majestic Elephants (hathi) and peacocks (mayura) in their glory!", 
+                    "product-ids":[0, 1, 2, 3, 4, 5]
+                },
+                {
+                    "name":"Flora Collection",
+                    "category-description":"Lotus, jasmine, and other vibrant flowers brought to life",
+                    "product-ids":[6, 7, 8]
+                },
+                {
+                    "name":"Divinity Collection",
+                    "category-description":"Vivid depictions of deities",
+                    "product-ids":[9, 10, 11, 12, 13, 14, 15, 16]
+                },
+                {
+                    "name":"Festive Collection",
+                    "category-description": "Festive tapestries with symmetric filigrees",
+                    "product-ids":[17, 18, 19]
+                }
+            ]
+        },
+        {
+            "parent-category": "pattachitra",
+            "parent-category-description": "Pattachitra description placeholder",
+            "collections":[
+                {
+                    "name":"Devi",
+                    "category-description":"category placeholder",
+                    "product-ids":[20, 21]
+                },
+                {
+                    "name":"Radha Krishna - the Eternal lovers",
+                    "category-description":"category placeholder",
+                    "product-ids":[22, 23, 24, 25]
+                },
+                {
+                    "name":"Tree of Life",
+                    "category-description":"category placeholder",
+                    "product-ids":[26, 27, 28, 29, 30, 31]
+                },
+                {
+                    "name":"Buddha",
+                    "category-description":"category placeholder",
+                    "product-ids":[32, 33]
+                },
+                {
+                    "name":"Harvest",
+                    "category-description":"category placeholder",
+                    "product-ids":[34, 35]
+                },
+                {
+                    "name":"Ganesha",
+                    "category-description":"category placeholder",
+                    "product-ids":[36, 37, 38]
+                },
+                {
+                    "name":"Misc",
+                    "category-description":"category placeholder",
+                    "product-ids":[39]
+                }
+            ]
+        }],
+
+    "products":[
+        {
+            "id":0,
+            "name":"Procession of Hathi amongst flowers (35 inch)",
+            "dims":"35 inches x  35 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":1,
+            "name":"Midnight dance of mayura pair (black and green)",
+            "dims":"34.75 inches x 34.75 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":2,
+            "name":"Majestic solo dance of mayura (red and blue)",
+            "dims":"34.25 inches x 34.5 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":3,
+            "name":"Midnight dance of mayura pair (black and pink)",
+            "dims":"34.75 inches x 34.75 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":4,
+            "name":"Procession of Hathi amongst flowers (34.75 inch)",
+            "dims":"34.75 inches x 34.75 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":5,
+            "name":"Daylight dance of mayura pair (red and blue)",
+            "dims":"34.75 inches x 34.5 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":6,
+            "name":"Mystic Blooms",
+            "dims":"35.5 inches x 35.75 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":7,
+            "name":"Flowers at Dawn",
+            "dims":"27 inches x  27 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":8,
+            "name":"Flowers in Spring",
+            "dims":"27 inches x  27 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":9,
+            "name":"Lord Jagannath with shankha (sacred conch)",
+            "dims":"3 feet x 3 feet",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":10,
+            "name":"Lord Jagannath in sunlight with mogra (jasmine)",
+            "dims":"37 inches x  37 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":11,
+            "name":"Lord Krishna and Goddess Radha's midnight dance",
+            "dims":"33.5 inches x 34 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":12,
+            "name":"Lord Jagannath amidst padma (lotus)",
+            "dims":"35.25 inches x 35.25 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":13,
+            "name":"Lord Jagannath amidst suryamukhi (sunflower) and mogra (jasmine)",
+            "dims":"34.5 inches x 34.5 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":14,
+            "name":"Lord Jagannath celebrating the advent of spring",
+            "dims":"35.25 inches x 35 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":15,
+            "name":"Intense Lord Jagannath in full power",
+            "dims":"35.25 inches x 33.75 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":16,
+            "name":"Midnight stroll of Lord Ganesha",
+            "dims":"28 inches x 28.5 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":17,
+            "name":"Large autumn canopy (Dark pink and yellow)",
+            "dims":"59.5 inches x 59 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":18,
+            "name":"Large Summertime canopy (Dark green and yellow)",
+            "dims":"5 feet x 5 feet",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":19,
+            "name":"Smaller summertime canopy (Dark green and yellow)",
+            "dims":"36.25 inches x 36.75 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":19,
+            "name":"Smaller summertime canopy (Dark green and yellow)",
+            "dims":"36.25 inches x 36.75 inches",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":20,
+            "name":"Mahisasura Mardini",
+            "dims":"11 inch x 21 inch",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":21,
+            "name":"Padmalakshmi with Gaja Vahana",
+            "dims":"11 in x 20.5 in",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":22,
+            "name":"Radha and Krishna under a tree (black and white)",
+            "dims":"11 inch x 21 inch",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":23,
+            "name":"Radha and Krishna dancing under a tree (vibrant colors) near a river with swans",
+            "dims":"11 in x 20.5 in",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":24,
+            "name":"Radha Krishna in boat (multicolored, red background)",
+            "dims":"21 inch x 11 inch - Horizontal",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":25,
+            "name":"Radha Krishna in boat (black and white, light grey background)",
+            "dims":"21 inch x 11 inch - Horizontal",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":26,
+            "name":"Tree of life painted in black with purple flowers, black rangoli design border.",
+            "dims":"11 inch x 21 inch",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":27,
+            "name":"Tree of life painted in black with red and yellow flowers, red and green flower border",
+            "dims":"-",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":28,
+            "name":"Tree of life painted in dark green with red and pink flowers, dark green rangoli design border",
+            "dims":"-",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":29,
+            "name":"Tree of life with green leaves and red bark, red green pink rangoli design border",
+            "dims":"-",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":30,
+            "name":"Tree of life painted in dark blue, red pink flowers, red green rangoli design border",
+            "dims":"11.5 inch x 21 inch",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":31,
+            "name":"Tree of life painted in dark blue, red and yellow flowers, red green rangoli design border",
+            "dims":"11.5 inch x 21.5 inch",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":32,
+            "name":"Buddha in dark purple robes holding white flowers",
+            "dims":"-",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":33,
+            "name":"Buddha in grey robes holding grey flowers (dark green background)",
+            "dims":"11 inch x 21 inch",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":34,
+            "name":"Farmer's harvest dance. Banana tree on top. Palanquin on second row.",
+            "dims":"10 in x 20 in",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":35,
+            "name":"Farmer's harvest dance. Banana tree on second row.",
+            "dims":"10 in x 20 in",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":36,
+            "name":"Ganesha in vibrant colors (orange, green, blue) dancing on red lotus with mushaka vahana",
+            "dims":"11 in x 20.5 in",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":37,
+            "name":"Ganesha in vibrant colors (green, orange, red) dancing on yellow lotus with mushaka vahana",
+            "dims":"11 in x 20.5 in",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":38,
+            "name":"Ganesha dancing with mushaka vahana on mandap (painted in black, red background)",
+            "dims":"11 inch x 21 inch",
+            "qty":1,
+            "description":"placeholder"
+        },
+        {
+            "id":39,
+            "name":"Ganda Bherunda",
+            "dims":"-",
+            "qty":1,
+            "description":"placeholder"
+        }
+    ]
+
+}

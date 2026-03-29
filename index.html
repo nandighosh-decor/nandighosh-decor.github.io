@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nandighosh eCommerce - Home</title>
+    
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lora&family=Gentium+Basic&family=Playfair+Display&family=Montserrat:wght@400;700&display=swap' rel='stylesheet'>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Basic', serif;
+            color: #7b8c89;
+            font-size: 18px;
+            line-height: 34px;
+            background-size: cover;
+        }
+
+        .body-wrap {
+            max-width: 100%;
+        }
+
+        /* Header */
+        #header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 40px 30px 40px;
+            background: transparent;
+        }
+
+        #sitename {
+            font-family: 'Brush Script MT', cursive;
+            font-weight: 400;
+            color: #76b3b8;
+            font-size: 48px;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation */
+        #navigation {
+            background: transparent;
+            padding: 0;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .wsite-menu-default {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            gap: 0;
+        }
+
+        .wsite-menu-item-wrap {
+            display: inline-block;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wsite-menu-item {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+            font-size: 11px;
+            color: #999;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: block;
+            padding: 15px 25px;
+        }
+
+        .wsite-menu-item:hover {
+            color: #76b3b8;
+        }
+
+        /* Dropdown */
+        .wsite-menu-wrap {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            min-width: 150px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+            border: 1px solid #e0e0e0;
+        }
+
+        .wsite-menu-item-wrap:hover .wsite-menu-wrap {
+            display: block;
+        }
+
+        .wsite-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .wsite-menu-subitem-wrap {
+            padding: 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .wsite-menu-subitem-wrap:last-child {
+            border-bottom: none;
+        }
+
+        .wsite-menu-subitem {
+            display: block;
+            padding: 12px 20px;
+            color: #999;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .wsite-menu-subitem:hover {
+            background: #f8f8f8;
+            color: #76b3b8;
+        }
+
+        .wsite-menu-title {
+            display: inline;
+        }
+
+        /* Banner Section */
+        .banner-wrap {
+            background: linear-gradient(rgba(22, 145, 100, 0.85), rgba(22, 145, 100, 0.85)), url("background-images/340202824.jpg") no-repeat 50% 50%;
+            background-size: cover;
+            padding: 80px 40px;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        #banner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .banner-wrap .wsite-content-title {
+            font-family: 'Playfair Display', serif;
+            color: white;
+            font-size: 60px;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .banner-wrap .paragraph {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .banner-wrap .paragraph strong {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        .banner-wrap em {
+            font-style: italic;
+        }
+
+        .wsite-content-title {
+            font-family: 'Playfair Display', serif;
+            color: #42514c;
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .paragraph {
+            margin-bottom: 20px;
+        }
+
+        /* Multi-column layout */
+        .wsite-multicol-table-wrap {
+            margin: 0 -15px;
+        }
+
+        .wsite-multicol-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .wsite-multicol-col {
+            padding: 0 15px;
+            vertical-align: top;
+        }
+
+        /* Content */
+        #content-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .wsite-section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 60px 40px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        /* Images */
+        .wsite-image {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .wsite-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        /* Spacer */
+        .wsite-spacer {
+            clear: both;
+        }
+
+        /* Footer */
+        #footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            margin-top: 40px;
+        }
+
+        #footer a {
+            color: #76b3b8;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+                line-height: 28px;
+            }
+
+            #header {
+                padding: 15px 20px;
+            }
+
+            #navigation {
+                padding: 10px 20px;
+            }
+
+            .wsite-menu-default {
+                display: block;
+            }
+
+            .wsite-menu-item-wrap {
+                display: block;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            .wsite-menu-item {
+                padding: 15px 10px;
+            }
+
+            .banner-wrap {
+                padding: 40px 20px;
+            }
+
+            .wsite-section {
+                padding: 30px 20px;
+            }
+
+            .wsite-content-title {
+                font-size: 28px;
+            }
+
+            .wsite-multicol-table,
+            .wsite-multicol-tbody,
+            .wsite-multicol-tr,
+            .wsite-multicol-col {
+                display: block;
+                width: 100% !important;
+            }
+
+            .wsite-multicol-col {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="body-wrap">
+        <!-- Header -->
+        <div id="header">
+            <div id="sitename">Nandighosh eCommerce (copy)</div>
+        </div>
+
+        <!-- Navigation -->
+        <div id="navigation">
+            <ul class="wsite-menu-default">
+                <li class="wsite-menu-item-wrap">
+                    <a href="index.html" class="wsite-menu-item">Home</a>
+                </li>
+                <li class="wsite-menu-item-wrap">
+                    <a class="wsite-menu-item">All Products</a>
+                    <div class="wsite-menu-wrap">
+                        <ul class="wsite-menu">
+                            <li class="wsite-menu-subitem-wrap">
+                                <a href="chandua.html" class="wsite-menu-subitem">
+                                    <span class="wsite-menu-title">Chandua</span>
+                                </a>
+                            </li>
+                            <li class="wsite-menu-subitem-wrap">
+                                <a href="pattachitra.html" class="wsite-menu-subitem">
+                                    <span class="wsite-menu-title">Pattachitra</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="wsite-menu-item-wrap">
+                    <a href="contact.html" class="wsite-menu-item">Contact</a>
+                </li>
+                <li class="wsite-menu-item-wrap">
+                    <a href="my-cart.html" class="wsite-menu-item">My Cart</a>
+                </li>
+                <li class="wsite-menu-item-wrap">
+                    <a href="account.html" class="wsite-menu-item">Account</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Banner Section -->
+        <div class="banner-wrap">
+            <div id="banner">
+                <table class="wsite-multicol-table">
+                    <tr class="wsite-multicol-tr">
+                        <td class="wsite-multicol-col" style="width:42.18%; padding-right: 40px;">
+                            <div style="height:24px;"></div>
+                            <h2 class="wsite-content-title">Nandighosh</h2>
+                            <div class="paragraph" style="text-align:center;">
+                                <strong>WARMING THE HOME AND THE HEART</strong>
+                            </div>
+                        </td>
+                        <td class="wsite-multicol-col" style="width:57.82%;">
+                            <div class="paragraph" style="text-align:right; font-size:20px; line-height: 1.8;">
+                                Our boutique sells traditional <em>Odia</em> handicrafts which transform everyday living into an art form.<br><br>
+                                From intricately woven <em>chandua</em>, to exquisitely painted <em>pattachitra,</em> our products are perfect for wall decor for one's home, workspace, gallery, or as a gift.
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div id="content-wrapper">
+            <div class="wsite-section">
+                <table class="wsite-multicol-table">
+                    <tr class="wsite-multicol-tr">
+                        <td class="wsite-multicol-col" style="width:51.47%;">
+                            <h2 class="wsite-content-title" style="text-align:right;">
+                                Blissful views, vintage<br>style lofts, and good people
+                            </h2>
+                            
+                            <div style="height:31px;"></div>
+
+                            <table class="wsite-multicol-table">
+                                <tr class="wsite-multicol-tr">
+                                    <td class="wsite-multicol-col" style="width:49.87%;">
+                                        <div class="wsite-image">
+                                            <img src="images/img2-2x_5.png" alt="Picture">
+                                        </div>
+                                        <div class="wsite-image">
+                                            <img src="images/img2-2x_6.png" alt="Picture">
+                                        </div>
+                                    </td>
+                                    <td class="wsite-multicol-col" style="width:50.13%;">
+                                        <div class="wsite-image">
+                                            <img src="images/img1-2x_3.png" alt="Picture">
+                                        </div>
+                                        <div class="wsite-image">
+                                            <img src="images/img1-2x_3_orig.png" alt="Picture">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="wsite-multicol-col" style="width:48.53%;">
+                            <div class="paragraph">
+                                Edit this text to make it your own. To edit, simply click directly on the text and start typing. You can move the text by dragging and dropping the Text Element anywhere on the page. Keep this text under 100 words for aesthetics and readability.<br>
+                                appliqué handicraft work from the town of Pipili, Odisha<br><br>
+                                Maecenas nec molestie eros, non pellentesque ex. Phasellus ultrices lorem suscipit dolor porttitor dapibus. Nunc et tempus sem. Duis metus purus, venenatis at congue in, ultrices non quam. Ut scelerisque tellus dolor, vel sagittis ipsum varius vel. Maecenas nec molestie eros, non pellentesque ex. Phasellus ultrices lorem suscipit dolor porttitor dapibus. Nunc et tempus sem. Duis metus purus, venenatis at congue in, ultrices non quam. Ut scelerisque tellus dolor, vel sagittis ipsum varius vel.
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        
+    </div>
+</body>
+</html>
